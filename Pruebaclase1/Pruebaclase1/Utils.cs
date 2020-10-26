@@ -38,19 +38,17 @@ namespace Pruebaclase1
             else
                 return false;
         }
-        //función que diga si un número es primo o no. (es primo aquel que se puede dividir por si mismo o por uno solamente)
-        /*public static bool PrimeNumber(int a, int b, int value)
+         public static bool Isprime(int number)
         {
-            if ((a / (value % a) 0)
-            
-                return true;
-           
-            else
-           
-                return false;
-            
-                
-        }*/
+            int i = 2;
+
+            while (i < number)
+            {
+                if ((number % i) == 0)
+                    return false;
+                i++;
+            }
+            return true;
 
         //Serie de Fibonacii
         //aa=anterior del anterior    a=anterior
@@ -68,6 +66,19 @@ namespace Pruebaclase1
                 aa = a;
                 a = aux + aa;
                 a++;
+                
+                
+        public static void ImprimirAsciis()
+        {
+            for (int i = 33; i <= 255; i++)
+            {
+                System.Console.Write(i);
+                System.Console.Write(") es el caracter^[");
+                System.Console.Write((char)i);
+                System.Console.Write("[");
+
+            }
+        }
 
             }
         }
