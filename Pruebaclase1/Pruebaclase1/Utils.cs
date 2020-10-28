@@ -38,7 +38,7 @@ namespace Pruebaclase1
             else
                 return false;
         }
-         public static bool Isprime(int number)
+        public static bool Isprime(int number)
         {
             int i = 2;
 
@@ -49,7 +49,7 @@ namespace Pruebaclase1
                 i++;
             }
             return true;
-
+        }
         //Serie de Fibonacii
         //aa=anterior del anterior    a=anterior
         //0,1,1,2,3,4,5,6.... puesto que desde el comiezo se empieza a sumar: 0+1=1   1+1=2   2+1=3...
@@ -66,20 +66,6 @@ namespace Pruebaclase1
                 aa = a;
                 a = aux + aa;
                 a++;
-                
-                
-        public static void ImprimirAsciis()
-        {
-            for (int i = 33; i <= 255; i++)
-            {
-                System.Console.Write(i);
-                System.Console.Write(") es el caracter^[");
-                System.Console.Write((char)i);
-                System.Console.Write("[");
-
-            }
-        }
-
             }
         }
     }

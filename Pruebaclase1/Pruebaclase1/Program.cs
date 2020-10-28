@@ -6,6 +6,7 @@ namespace Pruebaclase1
     {
         static void Main(string[] args)
         {
+            /*
             ejercicio.Ejercicioserie1();
 
             ejercicio.Ejercicioserie3();
@@ -23,7 +24,13 @@ namespace Pruebaclase1
 
             SolverEquation.SolverEquation1(6, 5);
             SolverEquation.SolverEquation2(6, 6, 9);
+            int result = ejercicioexamen.Ejerciciosuma(1,3);
+            System.Console.WriteLine(result);
+            */
 
+            ejercicioexamen.Ejerciciosuma(1,3);
+            ejercicioexamen.Restareales(1,6);
+            
         }
     }
 }
