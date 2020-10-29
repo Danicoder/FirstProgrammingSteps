@@ -28,8 +28,11 @@ namespace Pruebaclase1
             System.Console.WriteLine(result);
             */
 
-            ejercicioexamen.Ejerciciosuma(1,3);
-            ejercicioexamen.Restareales(1,6);
+            Exercisesexams.ExercisePlus(1,3);
+            Exercisesexams.SubtractionReal(1,6);
+            Exercisesexams.RetourReal1();
+            Exercisesexams.RetournReal2();
+
             
         }
     }
