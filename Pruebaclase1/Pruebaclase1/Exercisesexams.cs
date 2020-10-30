@@ -1,4 +1,6 @@
 ﻿
+using System;
+using System.Collections;
 using System.Runtime.InteropServices;
 
 namespace Pruebaclase1
@@ -49,7 +51,65 @@ namespace Pruebaclase1
             {
                 System.Console.WriteLine(" el nº " + option2 + " es menor que " + option1);
             }
-
         }
+        //hacer una funcion que se le pasen tres enteros y que devuelva el mayor de los tres
+        public static int Retournint(int a, int b, int c)
+        {
+            if (a > b)
+            {
+                if (a > c)
+                    return a;
+                else
+                    return c;
+            }
+            else
+            {
+                if (b > c)
+                    return b;
+                else
+                    return c;
+            }
+        }
+
+        //funcion que reciba dos enteros y devuelva -1 sí el primero es menor que el segundo,
+        //1 sí el segundo es menor que el primero y 0 si los dos nº son iguales.
+        public static int Receiveint(int a, int b)
+        {
+            if (a < b)
+                return -1;
+            if (a > b)
+                return 1;
+            return 0;
+        }
+        //funcion que reciba un código de error y muestre por pantalla los siguiente: "error grave" si el error es 0
+        //error moderado si el erroe es 1, error leve si el error es 2, error desconocido en cualquier otro caso.
+        public static void PrintError(int code)
+        {
+            switch (code)
+            {
+            case 0:
+                    System.Console.WriteLine("error grave");
+                    break;
+                case1:
+                    System.Console.WriteLine("error medio");
+                case2:
+                    System.Console.WriteLine("error leve");
+            default:
+                    System.Console.WriteLine("error desconocido");
+            break;
+            }
+        }
+
+        //funcion que reciba un nº y en función de ese nº que escibra la siguiente serie: 0.3.6.9.12.....
+        public static void PrintSerie(int n)
+        {
+            int i = 0;
+            while (i <= n)
+            {
+                System.Console.WriteLine(i+"La siguiente serie es:");
+                i += 3;
+            }
+        }
+        //funcion que reciba un nº entero e imprima todos los nº desde el cero hasta ese nº (utilizar for)
     }
 }
