@@ -111,5 +111,15 @@ namespace Pruebaclase1
             }
         }
         //funcion que reciba un nº entero e imprima todos los nº desde el cero hasta ese nº (utilizar for)
+        public static int PrintNumberRecibe(int n)
+        {
+            System.Console.WriteLine("Escribe un nº entero");
+            int n = System.Convert.ToInt32(System.Console.ReadLine());
+            
+            for(int i = 0; i <= n; i++)
+            {
+                System.Console.WriteLine("El nº consecutivo es:  "+n);
+            }
+        }
     }
 }

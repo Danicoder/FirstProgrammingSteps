@@ -34,8 +34,9 @@ namespace Pruebaclase1
             Exercisesexams.RetournReal2();
             Exercisesexams.Retournint(1, 4, 8);
             Exercisesexams.Receiveint(1, 4);
-            Exercisesexams.PrintError();
-            Exercisesexams.PrintSerie();
+            Exercisesexams.PrintError(1);
+            Exercisesexams.PrintSerie(2);
+            Exercisesexams.PrintNumberRecibe(2);
 
 
         }
