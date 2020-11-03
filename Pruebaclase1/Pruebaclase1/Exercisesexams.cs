@@ -101,7 +101,7 @@ namespace Pruebaclase1
         }
 
         //funcion que reciba un nº y en función de ese nº que escibra la siguiente serie: 0.3.6.9.12.....
-        public static void PrintSerie(int n)
+        public static void PrintSerie1(int n)
         {
             int i = 0;
             while (i <= n)
@@ -111,14 +111,96 @@ namespace Pruebaclase1
             }
         }
         //funcion que reciba un nº entero e imprima todos los nº desde el cero hasta ese nº (utilizar for)
-        public static int PrintNumberRecibe(int n)
+        public static void PrintNumberRecibe(int n)
         {
-            System.Console.WriteLine("Escribe un nº entero");
-            int n = System.Convert.ToInt32(System.Console.ReadLine());
-            
             for(int i = 0; i <= n; i++)
             {
-                System.Console.WriteLine("El nº consecutivo es:  "+n);
+                System.Console.WriteLine(i+",");
+            }
+        }
+        ////funcion que reciba un nº entero e imprima (0.1.2.3.4) y seis (0.1.2.3.4.5.6)
+        public static void PrintSerie2(int n)
+        {
+            for (int i = 0; i <= n; i++)
+            {
+                System.Console.Write(i);
+                    if (i < n)
+                {
+                    System.Console.Write(",");
+                }
+                        
+            }
+        }
+        //función que devuelva el mayor de seis enteros, esa función debe ocupr una línea
+        /*public static int RetournInt(int a, int b, int c, int d, int e, int f)
+        {
+            int mayor1=mayor3(a,b,c);
+        }*/
+        //hacer uan función que se le pase un entero e imprima tantos astericos como ese entero que se le pasa
+        //ejemplo: asteriscos(3)***
+        //asterisco(5)*****
+        public static void PrintAsterisk(int n)
+        {
+            for (int i = 0; i < n; i++)
+            {
+                System.Console.WriteLine("*");
+            }
+        }
+            //hacer uan función que se le pase un entero e imprima asterisco(3)*+*+;asterisco(5)*+*+*;asterisco(/a)=*+*+*+*+*+
+            /*public static void PrintAsteriskAdd(int n)
+            {
+                for(int i=0; i < n; i++)
+                {
+                    if (Utils.IsEven(i))
+                    System.Console.WriteLine("*+");
+                }
+            }*/
+            //hacer uan función que se le pase un entero e imprima asterisco(3)*+-;asterisco(5)*+-/*;asterisco(/a)=*+-/*+*-/*+
+            //el resto se represetna con: %
+            /*public static void PrintAsteriskAddMinus(int n)
+            {
+                int resto = i % 4;
+                for (resto; i < n; i++)
+                {
+                    switch (resto)
+                    {
+                        case 0:
+                            System.Console.WriteLine("*");
+                            break;
+                        case 1:
+                            System.Console.WriteLine("+");
+                            break;
+                    }
+                }
+
+            }*/
+            //hacer una funcion que pida un nº y en función de ese nº que imprima: figura (3) ***
+           //;***;*** figura4=*****4veces con espacio la c es de la columna y la f de la fila
+           public static void PrintOnlyAsterisk(int n)
+            {
+                for (int f=0;f<n;f++)
+                {
+                    for (int c = 0; c < n; c++)
+                    System.Console.Write("*");
+                }
+            System.Console.WriteLine();
+            }
+        //hacer una funcion que pida un nº y en función de ese nº que imprima: ***;+++;***
+        public static void PrintOtherAsteriskPlus(int n)
+        {
+            for(int f=0;f<n;f++)
+            {
+                for(int c=0;c<n;c++)
+                {
+                    if ((f%2)==0)
+                    {
+                        System.Console.Write("*");
+                        else
+                        
+                            System.Console.Write("+");
+                        
+                    }
+                }
             }
         }
     }

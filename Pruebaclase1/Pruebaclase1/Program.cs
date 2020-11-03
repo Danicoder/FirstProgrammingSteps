@@ -27,7 +27,7 @@ namespace Pruebaclase1
             int result = ejercicioexamen.Ejerciciosuma(1,3);
             System.Console.WriteLine(result);
             */
-
+            /*
             Exercisesexams.ExercisePlus(1,3);
             Exercisesexams.SubtractionReal(1,6);
             Exercisesexams.RetourReal1();
@@ -35,8 +35,15 @@ namespace Pruebaclase1
             Exercisesexams.Retournint(1, 4, 8);
             Exercisesexams.Receiveint(1, 4);
             Exercisesexams.PrintError(1);
-            Exercisesexams.PrintSerie(2);
+            Exercisesexams.PrintSerie1(2);
             Exercisesexams.PrintNumberRecibe(2);
+            Exercisesexams.PrintSerie2(2);
+            //Exercisesexams.PrintAsteriskAdd(2);
+            */
+
+            //Exercisesexams.PrintAsteriskAddMinus(3);
+            Exercisesexams.PrintOnlyAsterisk(3);
+            Exercisesexams.PrintOtherAsteriskPlus(3);
 
 
         }
