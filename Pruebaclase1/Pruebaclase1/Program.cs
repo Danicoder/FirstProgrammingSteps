@@ -44,6 +44,7 @@ namespace Pruebaclase1
             //Exercisesexams.PrintAsteriskAddMinus(3);
             Exercisesexams.PrintOnlyAsterisk(3);
             Exercisesexams.PrintOtherAsteriskPlus(3);
+            Exercisesexams.PrintSomeFila(4);
 
 
         }

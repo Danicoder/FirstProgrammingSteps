@@ -192,16 +192,37 @@ namespace Pruebaclase1
             {
                 for(int c=0;c<n;c++)
                 {
-                    if ((f%2)==0)
+                    for(c=0;c<n;c++)
                     {
+                        int flag = c + f;
+                        if ((flag%2)== 0)
                         System.Console.Write("*");
                         else
-                        
+                        {
                             System.Console.Write("+");
-                        
+                            System.Console.Write("*");
+                        }
                     }
+                    System.Console.WriteLine();
                 }
             }
         }
+        //funcion que imprima 
+        /*public static void PrintSomeFila(int n)
+        {
+            int f;
+            for(f=0;f<n;f++)
+            {
+                int nespacios = n - (f + 1);
+                int nasteriscos = f + 1;
+                int c;
+                for(c = 0; c < n; c++)
+                {
+                    
+                }
+            }
+        }*/
+
+
     }
 }
