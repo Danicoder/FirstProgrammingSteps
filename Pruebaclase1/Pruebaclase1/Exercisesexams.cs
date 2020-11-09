@@ -90,11 +90,13 @@ namespace Pruebaclase1
             case 0:
                     System.Console.WriteLine("error grave");
                     break;
-                case1:
+                case 1:
                     System.Console.WriteLine("error medio");
-                case2:
+                    break;
+                case 2:
                     System.Console.WriteLine("error leve");
-            default:
+                    break;
+                default:
                     System.Console.WriteLine("error desconocido");
             break;
             }
@@ -118,7 +120,7 @@ namespace Pruebaclase1
                 System.Console.WriteLine(i+",");
             }
         }
-        ////funcion que reciba un nº entero e imprima (0.1.2.3.4) y seis (0.1.2.3.4.5.6)
+        //funcion que reciba un nº entero e imprima (0.1.2.3.4) y seis (0.1.2.3.4.5.6)
         public static void PrintSerie2(int n)
         {
             for (int i = 0; i <= n; i++)
@@ -192,6 +194,7 @@ namespace Pruebaclase1
             {
                 for(int c=0;c<n;c++)
                 {
+<<<<<<< HEAD
                     for(c=0;c<n;c++)
                     {
                         int flag = c + f;
@@ -204,6 +207,9 @@ namespace Pruebaclase1
                         }
                     }
                     System.Console.WriteLine();
+=======
+                        System.Console.Write("***;+++;***");
+>>>>>>> 10c4afd014a66dd86e36e06f819c795821523021
                 }
             }
         }
