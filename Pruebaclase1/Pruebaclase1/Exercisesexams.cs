@@ -148,68 +148,64 @@ namespace Pruebaclase1
                 System.Console.WriteLine("*");
             }
         }
-            //hacer uan función que se le pase un entero e imprima asterisco(3)*+*+;asterisco(5)*+*+*;asterisco(/a)=*+*+*+*+*+
-            /*public static void PrintAsteriskAdd(int n)
+        //hacer uan función que se le pase un entero e imprima asterisco(3)*+*+;asterisco(5)*+*+*;asterisco(/a)=*+*+*+*+*+
+        /*public static void PrintAsteriskAdd(int n)
+        {
+            for(int i=0; i < n; i++)
             {
-                for(int i=0; i < n; i++)
-                {
-                    if (Utils.IsEven(i))
-                    System.Console.WriteLine("*+");
-                }
-            }*/
-            //hacer uan función que se le pase un entero e imprima asterisco(3)*+-;asterisco(5)*+-/*;asterisco(/a)=*+-/*+*-/*+
-            //el resto se represetna con: %
-            /*public static void PrintAsteriskAddMinus(int n)
-            {
-                int resto = i % 4;
-                for (resto; i < n; i++)
-                {
-                    switch (resto)
-                    {
-                        case 0:
-                            System.Console.WriteLine("*");
-                            break;
-                        case 1:
-                            System.Console.WriteLine("+");
-                            break;
-                    }
-                }
-
-            }*/
-            //hacer una funcion que pida un nº y en función de ese nº que imprima: figura (3) ***
-           //;***;*** figura4=*****4veces con espacio la c es de la columna y la f de la fila
-           public static void PrintOnlyAsterisk(int n)
-            {
-                for (int f=0;f<n;f++)
-                {
-                    for (int c = 0; c < n; c++)
-                    System.Console.Write("*");
-                }
-            System.Console.WriteLine();
+                if (Utils.IsEven(i))
+                System.Console.WriteLine("*+");
             }
+        }*/
+        //hacer uan función que se le pase un entero e imprima asterisco(3)*+-;asterisco(5)*+-/*;asterisco(/a)=*+-/*+*-/*+
+        //el resto se represetna con: %
+        /*public static void PrintAsteriskAddMinus(int n)
+        {
+            int resto = i % 4;
+            for (resto; i < n; i++)
+            {
+                switch (resto)
+                {
+                    case 0:
+                        System.Console.WriteLine("*");
+                        break;
+                    case 1:
+                        System.Console.WriteLine("+");
+                        break;
+                }
+            }
+
+        }*/
+        //hacer una funcion que pida un nº y en función de ese nº que imprima: figura (3) ***
+        //;***;*** figura4=*****4veces con espacio la c es de la columna y la f de la fila
+        public static void PrintOnlyAsterisk(int n)
+        {
+            for (int f = 0; f < n; f++)
+            {
+                for (int c = 0; c < n; c++)
+                    System.Console.Write("*");
+            }
+            System.Console.WriteLine();
+        }
         //hacer una funcion que pida un nº y en función de ese nº que imprima: ***;+++;***
         public static void PrintOtherAsteriskPlus(int n)
         {
-            for(int f=0;f<n;f++)
+            for (int f = 0; f < n; f++)
             {
-                for(int c=0;c<n;c++)
+                for (int c = 0; c < n; c++)
                 {
-<<<<<<< HEAD
-                    for(c=0;c<n;c++)
+                    for (c = 0; c < n; c++)
                     {
                         int flag = c + f;
-                        if ((flag%2)== 0)
-                        System.Console.Write("*");
+                        if ((flag % 2) == 0)
+                            System.Console.Write("*");
                         else
                         {
-                            System.Console.Write("+");
-                            System.Console.Write("*");
+                            System.Console.Write("_");
                         }
                     }
                     System.Console.WriteLine();
-=======
-                        System.Console.Write("***;+++;***");
->>>>>>> 10c4afd014a66dd86e36e06f819c795821523021
+                    System.Console.Write("***;+++;***");
                 }
             }
         }
@@ -228,7 +224,57 @@ namespace Pruebaclase1
                 }
             }
         }*/
+        //imprime lo mismo que el ejerci
+        //pirámide alreves (resolver en casa)
+        /*
+        public static int PrintSpaceAsterisk(int n)
+        {
+            int f;
+            for (f=0;f<n;f++)
+            {
+                int nespacios = n - f - 1;
+                int nasteriscos = (n-f-1)*2;
+                int c;
 
+                for(c=0;c<n;c++)
+                {
+                    System.Console.WriteLine("*"+nespacios);
+                    System.Console.WriteLine("*" + nespacios);
+                }
 
+            }
+        }*/
+        /*public static void rombo(int n)
+        {
+            Piramide(n);
+            PiramideInvertida(n);
+        }*/
+        public static void BanderaAmericana()
+        {
+            int f;
+
+            for(f=0;f<10;f++)
+            {
+                int c;
+                for(c=0;c<15;c++)
+                {
+                    int f2 = f / 2;
+                    if (0<=c && c<=5 && 0 <= f && f<=2)
+                    {
+                        int flag = c + f;
+                        if((flag%2)==0)
+                            System.Console.Write("+");
+                        else
+                            System.Console.Write(" ");
+                    }
+                    else if ((f2 % 2) == 0)
+                        System.Console.Write("*");
+                    else
+                        System.Console.Write(" ");
+                }
+                System.Console.WriteLine();
+            }
+            //
+        }
     }
 }

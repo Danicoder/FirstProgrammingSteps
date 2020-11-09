@@ -41,11 +41,21 @@ namespace Pruebaclase1
             //Exercisesexams.PrintAsteriskAdd(2);
             */
 
-            //Exercisesexams.PrintAsteriskAddMinus(3);
+            /*//Exercisesexams.PrintAsteriskAddMinus(3);
             Exercisesexams.PrintOnlyAsterisk(3);
             Exercisesexams.PrintOtherAsteriskPlus(3);
-            Exercisesexams.PrintSomeFila(4);
-
+            //Exercisesexams.PrintSomeFila(4);
+            
+            while (true)
+            {
+                for(int i=0;i<10;i++)
+                {
+                    Rombo(i);
+                    System.Threading.Thread.Sleep(200);//tiempo que esta quieto y no da ningún resultado
+                    System.Console.Clear();//limpiar
+                }
+            }*/
+            Exercisesexams.BanderaAmericana();
 
         }
     }
