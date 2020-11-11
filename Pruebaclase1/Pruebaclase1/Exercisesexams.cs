@@ -19,41 +19,23 @@ namespace Pruebaclase1
         {
             return n1 - n2;
         }
-        //hacer dos funciones que reciba dos reales cada uno de ellas, una que devuelva el mayor de los dos reales y la otra el menos de los dos reales
-        public static void RetourReal1()
+        //hacer dos funciones que reciba dos reales cada uno de ellas, una que devuelva el mayor de los dos reales y la otra el menor de los dos reales
+        public static int IsGreater(int a, int b)//mayor de los dos reales
         {
-            System.Console.Write("escribe un número:   ");
-            double option2 = System.Convert.ToDouble(System.Console.ReadLine());
-            System.Console.Write("escribe el otro número:   ");
-            double option1 = System.Convert.ToDouble(System.Console.ReadLine());
-
-            if (option1 >= option2)
-            {
-                System.Console.WriteLine("el nº mayor de los dos reales es:  " + option1);
-            }
+            if (a > b)
+                return a;
             else
-            {
-                System.Console.WriteLine(" el nº " + option2 + " es mayor que " + option1) ;
-            }
+                return b;
         }
-        public static void RetournReal2()
+        public static int IsMinor(int a, int b)//menor de los dos reales
         {
-            System.Console.Write("escribe un número:   ");
-            double option2 = System.Convert.ToDouble(System.Console.ReadLine());
-            System.Console.Write("escribe el otro número:   ");
-            double option1 = System.Convert.ToDouble(System.Console.ReadLine());
-
-            if (option1 <= option2)
-            {
-                System.Console.WriteLine("el nº menor de ambos reales es:  " + option1);
-            }
+            if (a > b)
+                return b;
             else
-            {
-                System.Console.WriteLine(" el nº " + option2 + " es menor que " + option1);
-            }
+                return a;
         }
         //hacer una funcion que se le pasen tres enteros y que devuelva el mayor de los tres
-        public static int Retournint(int a, int b, int c)
+        public static int IsGreatherthan3(int a, int b, int c)
         {
             if (a > b)
             {
@@ -69,8 +51,13 @@ namespace Pruebaclase1
                 else
                     return c;
             }
-        }
 
+        }
+        //función que devuelva el mayor de seis enteros
+        public static int IsGreaterThan6(int a, int b, int c, int d, int e, int f)
+        {
+            return IsGreater(IsGreatherthan3(a, b, c), IsGreatherthan3(d, e, f));
+        }
         //funcion que reciba dos enteros y devuelva -1 sí el primero es menor que el segundo,
         //1 sí el segundo es menor que el primero y 0 si los dos nº son iguales.
         public static int Receiveint(int a, int b)
@@ -87,7 +74,7 @@ namespace Pruebaclase1
         {
             switch (code)
             {
-            case 0:
+                case 0:
                     System.Console.WriteLine("error grave");
                     break;
                 case 1:
@@ -98,7 +85,7 @@ namespace Pruebaclase1
                     break;
                 default:
                     System.Console.WriteLine("error desconocido");
-            break;
+                    break;
             }
         }
 
@@ -108,36 +95,32 @@ namespace Pruebaclase1
             int i = 0;
             while (i <= n)
             {
-                System.Console.WriteLine(i+"La siguiente serie es:");
-                i += 3;
+                System.Console.WriteLine(n);
+                n += 3;
             }
         }
         //funcion que reciba un nº entero e imprima todos los nº desde el cero hasta ese nº (utilizar for)
         public static void PrintNumberRecibe(int n)
         {
-            for(int i = 0; i <= n; i++)
+            for (int i = 0; i <= n; i++)
             {
-                System.Console.WriteLine(i+",");
+                System.Console.Write(i + ",");
             }
         }
-        //funcion que reciba un nº entero e imprima (0.1.2.3.4) y seis (0.1.2.3.4.5.6)
+        //funcion que reciba un nº entero e imprima (0.1.2.3.4) o seis (0.1.2.3.4.5.6)
         public static void PrintSerie2(int n)
         {
             for (int i = 0; i <= n; i++)
             {
                 System.Console.Write(i);
-                    if (i < n)
+                if (i < n)
                 {
                     System.Console.Write(",");
                 }
-                        
+
             }
         }
-        //función que devuelva el mayor de seis enteros, esa función debe ocupr una línea
-        /*public static int RetournInt(int a, int b, int c, int d, int e, int f)
-        {
-            int mayor1=mayor3(a,b,c);
-        }*/
+
         //hacer uan función que se le pase un entero e imprima tantos astericos como ese entero que se le pasa
         //ejemplo: asteriscos(3)***
         //asterisco(5)*****
@@ -145,124 +128,189 @@ namespace Pruebaclase1
         {
             for (int i = 0; i < n; i++)
             {
-                System.Console.WriteLine("*");
+                System.Console.Write("*");
             }
         }
-        //hacer uan función que se le pase un entero e imprima asterisco(3)*+*+;asterisco(5)*+*+*;asterisco(/a)=*+*+*+*+*+
-        /*public static void PrintAsteriskAdd(int n)
+        //hacer uan función que se le pase un entero e imprima asterisco(3)*+*;asterisco(5)*+*+*;asterisco(/a)=*+*+*+*+*+
+        public static void PrintAsteriskPlusSum(int n)
         {
-            for(int i=0; i < n; i++)
+            for (int i = 0; i < n; i++)
             {
-                if (Utils.IsEven(i))
-                System.Console.WriteLine("*+");
+                if (Utils.IsEven(i)) //lo mismo que escribir if((i%2)==0)para indicar qeu si es par entra en el bucle
+                    System.Console.Write("*");
+                else
+                    System.Console.Write("+");
             }
-        }*/
-        //hacer uan función que se le pase un entero e imprima asterisco(3)*+-;asterisco(5)*+-/*;asterisco(/a)=*+-/*+*-/*+
-        //el resto se represetna con: %
-        /*public static void PrintAsteriskAddMinus(int n)
+        }
+        //función que imprima +*+*... en columnas y en filas
+        public static void AsteriskSum(int n)
         {
-            int resto = i % 4;
-            for (resto; i < n; i++)
+            int f;
+            for (f = 0; f < n; f++)
             {
-                switch (resto)
+                int c;
+                for (c = 0; c < n; c++)
+                {
+                    int flag = c + f;
+
+                    if ((flag % 2) == 0)
+                        System.Console.Write("*");
+                    else
+                        System.Console.Write("+");
+                }
+                System.Console.WriteLine();
+            }
+        }
+        //hacer uan función que se le pase un entero e imprima (/n)=*+-/*+*-/*+
+        public static void PrintAsteriskAddMinus(int n)
+        {
+            for (int i = 0; i <= n; i++)
+            {
+                switch (i % 4)//el resto se represetna con: %
                 {
                     case 0:
-                        System.Console.WriteLine("*");
+                        System.Console.Write("*");
                         break;
                     case 1:
-                        System.Console.WriteLine("+");
+                        System.Console.Write("+");
+                        break;
+                    case 2:
+                        System.Console.Write("-");
+                        break;
+                    case 3:
+                        System.Console.Write("/");
                         break;
                 }
             }
 
-        }*/
+        }
         //hacer una funcion que pida un nº y en función de ese nº que imprima: figura (3) ***
-        //;***;*** figura4=*****4veces con espacio la c es de la columna y la f de la fila
+        //veces con espacios de por medio
         public static void PrintOnlyAsterisk(int n)
         {
-            for (int f = 0; f < n; f++)
+            for (int f = 0; f < n; f++)// f de fila
             {
-                for (int c = 0; c < n; c++)
+                for (int c = 0; c < n; c++)// c de columna
                     System.Console.Write("*");
             }
             System.Console.WriteLine();
         }
-        //hacer una funcion que pida un nº y en función de ese nº que imprima: ***;+++;***
-        public static void PrintOtherAsteriskPlus(int n)
+        //hacer una funcion que si paso un tres imprima 3x3 con asteriscos 
+        public static void SquareShape(int n)
         {
             for (int f = 0; f < n; f++)
             {
                 for (int c = 0; c < n; c++)
                 {
-                    for (c = 0; c < n; c++)
-                    {
-                        int flag = c + f;
-                        if ((flag % 2) == 0)
-                            System.Console.Write("*");
-                        else
-                        {
-                            System.Console.Write("_");
-                        }
-                    }
-                    System.Console.WriteLine();
-                    System.Console.Write("***;+++;***");
+                    if ((f % 2) == 0)
+                        System.Console.Write("*");
+                    else
+                        System.Console.Write("+");
                 }
+                System.Console.WriteLine();
             }
         }
-        //funcion que imprima 
-        /*public static void PrintSomeFila(int n)
+        //funcion que imprima con asteriscos la forma de una escalera (lader) inversa
+        public static void BackStairs(int n)
         {
             int f;
-            for(f=0;f<n;f++)
+            for (f = 0; f < n; f++)
             {
-                int nespacios = n - (f + 1);
-                int nasteriscos = f + 1;
+                int nSpace = n - (f + 1);
+                int nAsterisk = f + 1;
                 int c;
-                for(c = 0; c < n; c++)
-                {
-                    
-                }
+                for (c = 0; c < nSpace; c++)
+                    System.Console.Write(" ");
+                for (c = 0; c < nAsterisk; c++)
+                    System.Console.Write("*");
+                System.Console.WriteLine();
             }
-        }*/
-        //imprime lo mismo que el ejerci
-        //pirámide alreves (resolver en casa)
-        /*
-        public static int PrintSpaceAsterisk(int n)
+        }
+        //imprimir por pantalla la forma de una pirámide
+        public static void Pyramid(int n)
         {
             int f;
-            for (f=0;f<n;f++)
+            for (f = 0; f < n; f++)
             {
-                int nespacios = n - f - 1;
-                int nasteriscos = (n-f-1)*2;
+                int nAsterisk1 = n - f - 1;
+                int nAsterisk2 = f * 2;
                 int c;
 
-                for(c=0;c<n;c++)
-                {
-                    System.Console.WriteLine("*"+nespacios);
-                    System.Console.WriteLine("*" + nespacios);
-                }
+                for (c = 0; c < nAsterisk1; c++)
+                    System.Console.Write(" ");
+                System.Console.Write("*");
 
+
+                for (c = 0; c < nAsterisk2; c++)
+                    System.Console.Write(" ");
+                System.Console.Write("*");
+
+                System.Console.WriteLine();
             }
-        }*/
-        /*public static void rombo(int n)
+        }
+        //igual que el ejercicio anterior pero escrito de manera distinta
+        public static void Pyramid2(int n)
         {
-            Piramide(n);
-            PiramideInvertida(n);
-        }*/
-        public static void BanderaAmericana()
+            int f;
+            for (f = 0; f < n; f++)
+            {
+                int nAsterisk1 = n - f - 1;
+                int nAsterisk2 = (f * 2) - 1;//MaxValue (0,2*f -1) para que cuando f sea 0, la solucuón no sea...
+                int c;
+
+                for (c = 0; c < nAsterisk1; c++)
+                    System.Console.Write(" ");
+                System.Console.Write("*");
+
+                for (c = 0; c < nAsterisk2; c++)
+                    System.Console.Write(" ");
+                if (f != 0)
+                    System.Console.Write("*");
+
+                System.Console.WriteLine();
+            }
+        }
+        //hacer la pirámide alreves
+        public static void PyramidBack(int n)
+        {
+            int f;
+            for (f = 0; f < n; f++)
+            {
+                int nAsterisk1 = f;
+                int nAsterisk2 = (n - f - 1) * 2;
+                int c;
+
+                for (c = 0; c < nAsterisk1; c++)
+                    System.Console.Write(" ");
+                System.Console.Write("*");
+
+                for (c = 0; c < nAsterisk2; c++)
+                    System.Console.Write(" ");
+                System.Console.Write("*");
+
+                System.Console.WriteLine(" ");
+            }
+        }//hacer un ROMBO (rhombus)
+        public static void Romrhombusbo(int n)
+        {
+            Pyramid(n);
+            PyramidBack(n);
+        }
+        public static void AmericanFlag()
         {
             int f;
 
-            for(f=0;f<10;f++)
+            for (f = 0; f < 10; f++)
             {
                 int c;
-                for(c=0;c<15;c++)
+                for (c = 0; c < 15; c++)
                 {
                     int f2 = f / 2;
-                    if (0<=c && c<=5 && 0 <= f && f<=2)
+
+                    if (0 <= c && c <= 5 && 0 <= f && f <= 2)
                     {
                         int flag = c + f;
-                        if((flag%2)==0)
+                        if ((flag % 2) == 0)// o lo hago invocando: Utils.IsEven(flag)
                             System.Console.Write("+");
                         else
                             System.Console.Write(" ");
@@ -274,7 +322,22 @@ namespace Pruebaclase1
                 }
                 System.Console.WriteLine();
             }
-            //
+        }
+        public static void JapaneseFlag()
+        {
+
+            int f;
+
+            for (f = 0; f < 20; f++)
+            {
+                int c;
+                if (c == 0; || c == -74 || f == 0 || f == 19)
+                System.Console.Write("*");
+                else if (distance(25, 10, c, f) > 5.0)
+                System.Console.Write("0");
+                else
+                System.Console.Write("*");
+            }
         }
     }
 }

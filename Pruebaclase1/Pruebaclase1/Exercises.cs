@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Pruebaclase1
 {
-    class ejercicio
+    class Exercises
     {
         // salvo que ponga imprime por pantalla "console.writeline" (es solo para aplicacion de consola o para mensajes de debood)
         // recordar el MVC (en relacion a console.writeline)
-        //ejercicio: Hacer una función que imprima por pantalla los números del 0 al 100
+        //Hacer una función que imprima por pantalla los números del 0 al 100
         public static void Ejercicioserie1()
         {
             int i = 0;
@@ -21,19 +21,18 @@ namespace Pruebaclase1
                 // contador += 1;
             }
         }
-        //función que imprima por pantalla todos los números pares desde el 0 hasta 100
-        /*
+        //función que imprima por pantalla todos los números pares desde el 0 hasta 100 (2,4,6,8...)
+        
         public static void Ejercicioserie2()
         {
-            int i = 0;
+            int i = 1;
             while (i <= 100)
             {
-                int value = 0;
                 if (Utils.IsEven(i))
-                    System.Console.WriteLine("la solución es:" i * 2);
-                i++;
+                    System.Console.WriteLine("la solución es:" +i);
+                    i++;
             }
-        }*/
+        }
         //ejercicio donde salgan los número así: 1, 4, 7, 10 ,13...
         public static void Ejercicioserie3()
         {
@@ -58,17 +57,19 @@ namespace Pruebaclase1
             }
         }
         //ejercicio que imprima por pantalla: 0, -1, 2, -3, 4, -5, 6, -7, 8, ......100
-        /*public static void Ejercicioserie5()
+        public static void Ejercicioserie5()
         {
             int i = 0;
             while( i <= 100)
             {
-                if(ValueType % 2)
-                {
-                    System.Console.WriteLine("la solución es:"+ i);
-                }
+                if(Utils.IsEven(i))
+                    System.Console.WriteLine(i);
+                else
+
+                    System.Console.WriteLine(-i);
+                    i++;  
             }
-        }*/
+        }
 
 
 

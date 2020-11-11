@@ -6,11 +6,12 @@ namespace Pruebaclase1
     {
         static void Main(string[] args)
         {
-            /*
-            ejercicio.Ejercicioserie1();
 
-            ejercicio.Ejercicioserie3();
-            ejercicio.Ejercicioserie4();
+            /*Exercises.Ejercicioserie1();
+            Exercises.Ejercicioserie2();
+            Exercises.Ejercicioserie3();
+            Exercises.Ejercicioserie4();
+            Exercises.Ejercicioserie5();
 
             Geometric.CalculateVectorLegth(3, 4);
             Geometric.CalculateVector3DLegth(1, 0,9);
@@ -23,39 +24,40 @@ namespace Pruebaclase1
             Utils.Fibonacci();
 
             SolverEquation.SolverEquation1(6, 5);
-            SolverEquation.SolverEquation2(6, 6, 9);
-            int result = ejercicioexamen.Ejerciciosuma(1,3);
-            System.Console.WriteLine(result);
-            */
-            /*
-            Exercisesexams.ExercisePlus(1,3);
+            SolverEquation.SolverEquation2(6, 6, 9);*/
+
+            /*Exercisesexams.ExercisePlus(1,3);
             Exercisesexams.SubtractionReal(1,6);
-            Exercisesexams.RetourReal1();
-            Exercisesexams.RetournReal2();
-            Exercisesexams.Retournint(1, 4, 8);
+            Exercisesexams.IsGreater(8,56);
+            Exercisesexams.IsMinor(1,5);
+            Exercisesexams.IsGreatherthan3(1, 4, 8);
+            Exercisesexams.IsGreaterThan6(1, 4, 8, 10, 56, 80);
             Exercisesexams.Receiveint(1, 4);
             Exercisesexams.PrintError(1);
-            Exercisesexams.PrintSerie1(2);
-            Exercisesexams.PrintNumberRecibe(2);
+            Exercisesexams.PrintSerie1(0);
+            Exercisesexams.PrintNumberRecibe(5);
             Exercisesexams.PrintSerie2(2);
-            //Exercisesexams.PrintAsteriskAdd(2);
-            */
-
-            /*//Exercisesexams.PrintAsteriskAddMinus(3);
+            Exercisesexams.PrintAsterisk(5);
+            Exercisesexams.PrintAsteriskPlusSum(3);
+            Exercisesexams.AsteriskSum(3);
+            Exercisesexams.PrintAsteriskAddMinus(6);*/
             Exercisesexams.PrintOnlyAsterisk(3);
-            Exercisesexams.PrintOtherAsteriskPlus(3);
-            //Exercisesexams.PrintSomeFila(4);
-            
+            /*Exercisesexams.SquareShape(3);
+            Exercisesexams.BackStairs(4);
+            Exercisesexams.Pyramid(6);
+            Exercisesexams.Pyramid2(6);
+            Exercisesexams.PyramidBack(6);*/
+
             while (true)
             {
                 for(int i=0;i<10;i++)
                 {
-                    Rombo(i);
+                    Exercisesexams.Romrhombusbo(i);
                     System.Threading.Thread.Sleep(200);//tiempo que esta quieto y no da ningún resultado
                     System.Console.Clear();//limpiar
                 }
-            }*/
-            Exercisesexams.BanderaAmericana();
+            }
+            //Exercisesexams.AmericanFlag();
 
         }
     }
