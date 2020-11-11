@@ -24,9 +24,9 @@ namespace Pruebaclase1
             Utils.Fibonacci();
 
             SolverEquation.SolverEquation1(6, 5);
-            SolverEquation.SolverEquation2(6, 6, 9);*/
+            SolverEquation.SolverEquation2(6, 6, 9);
 
-            /*Exercisesexams.ExercisePlus(1,3);
+            Exercisesexams.ExercisePlus(1,3);
             Exercisesexams.SubtractionReal(1,6);
             Exercisesexams.IsGreater(8,56);
             Exercisesexams.IsMinor(1,5);
@@ -40,9 +40,9 @@ namespace Pruebaclase1
             Exercisesexams.PrintAsterisk(5);
             Exercisesexams.PrintAsteriskPlusSum(3);
             Exercisesexams.AsteriskSum(3);
-            Exercisesexams.PrintAsteriskAddMinus(6);*/
+            Exercisesexams.PrintAsteriskAddMinus(6);
             Exercisesexams.PrintOnlyAsterisk(3);
-            /*Exercisesexams.SquareShape(3);
+            Exercisesexams.SquareShape(3);
             Exercisesexams.BackStairs(4);
             Exercisesexams.Pyramid(6);
             Exercisesexams.Pyramid2(6);
@@ -57,7 +57,7 @@ namespace Pruebaclase1
                     System.Console.Clear();//limpiar
                 }
             }
-            //Exercisesexams.AmericanFlag();
+            Exercisesexams.JapaneseFlag(6);
 
         }
     }

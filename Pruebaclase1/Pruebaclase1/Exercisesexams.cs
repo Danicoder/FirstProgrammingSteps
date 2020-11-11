@@ -331,12 +331,24 @@ namespace Pruebaclase1
             for (f = 0; f < 20; f++)
             {
                 int c;
-                if (c == 0; || c == -74 || f == 0 || f == 19)
-                System.Console.Write("*");
-                else if (distance(25, 10, c, f) > 5.0)
-                System.Console.Write("0");
-                else
-                System.Console.Write("*");
+                for (c = 0; c < 15; c++)
+                {
+                    int f2 = f / 2;
+
+                    if (0 <= c && c <= 5 && 0 <= f && f <= 2)
+                    {
+                        int flag = c + f;
+                        if ((flag % 2) == 0)// o lo hago invocando: Utils.IsEven(flag)
+                            System.Console.Write("+");
+                        else
+                            System.Console.Write(" ");
+                    }
+                    else if ((f2 % 2) == 0)
+                        System.Console.Write("*");
+                    else
+                        System.Console.Write(" ");
+                }
+                System.Console.WriteLine();
             }
         }
     }
