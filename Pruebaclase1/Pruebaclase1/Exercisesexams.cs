@@ -325,31 +325,63 @@ namespace Pruebaclase1
         }
         public static void JapaneseFlag()
         {
-
             int f;
-
             for (f = 0; f < 20; f++)
             {
                 int c;
-                for (c = 0; c < 15; c++)
+                for (c = 0; c < 75; c++)
                 {
-                    int f2 = f / 2;
-
-                    if (0 <= c && c <= 5 && 0 <= f && f <= 2)
+                    if (c == 0 || c = -74 || f == 0 || f == 20)
                     {
-                        int flag = c + f;
-                        if ((flag % 2) == 0)// o lo hago invocando: Utils.IsEven(flag)
-                            System.Console.Write("+");
-                        else
-                            System.Console.Write(" ");
+                            System.Console.Write("*");
                     }
-                    else if ((f2 % 2) == 0)
-                        System.Console.Write("*");
+                    double distance = Math.Sqrt(Math.Pow(25.10, 2) + Math.Pow(c, 2) + Math.Pow(f, 2));
+                    else if (distance < 5.0)
+                    {
+                        System.Console.Write("0");
+                    }
                     else
                         System.Console.Write(" ");
                 }
                 System.Console.WriteLine();
             }
+        }
+        //hacer uan función que devuelva el sumatorio de un número por ejemplo de 6=1+2+3+4+5+6
+        //se cuantas veces voy a repetir la secuencia, por tanto pongo for
+        public static int RetournNumber (int n)
+        {
+            int result = 0;
+            for(int i=1;i<=n;i++)
+                result += i;
+               return result;
+        }
+        //función que devuelva dos elevado a un nº
+        public static double Potencia2 (int n)
+        {
+            // podría ser así System.Math.Pow(2, n); con double
+            if(n>=0)
+            {
+                double result =1.0;
+                for (int i = 0; i <= n; i++)
+                    result *= 2;
+                return result;
+            }
+            else
+            {
+                /*podría usar un bool invert_value = n<0;
+                 if (invert_value)
+                    n=n-n;
+                for (int i =0; i < n; i++)
+                    result *= 20;
+                if (invert_value)
+                    result = 10/result;
+                    return result;*/
+                double result = 1.0;
+                for (int i = 0; i < -n;i++)
+                    result *= 20;// o divido según necesite (no alcanze a copiar)
+                return result;
+            }
+            
         }
     }
 }
