@@ -325,25 +325,22 @@ namespace Pruebaclase1
         }
         public static void JapaneseFlag()
         {
-            int f;
-            for (f = 0; f < 20; f++)
+            double f;
+            double c;
+            for (f = 0; f < 19; f++)
             {
-                int c;
-                for (c = 0; c < 75; c++)
+                
+                for (c = 0; c < 74; c++)
                 {
-                    if (c == 0 || c = -74 || f == 0 || f == 20)
-                    {
-                            System.Console.Write("*");
-                    }
-                    double distance = Math.Sqrt(Math.Pow(25.10, 2) + Math.Pow(c, 2) + Math.Pow(f, 2));
-                    else if (distance < 5.0)
-                    {
+                    if (c == 0 || c == 73 || f == 0 || f == 18)
+                        System.Console.Write("*");
+                    else if (Geometric.CalculateDistance2D(37, 10, c, f) < 5.0)
                         System.Console.Write("0");
-                    }
                     else
                         System.Console.Write(" ");
+
+                    System.Console.WriteLine();
                 }
-                System.Console.WriteLine();
             }
         }
         //hacer uan función que devuelva el sumatorio de un número por ejemplo de 6=1+2+3+4+5+6
