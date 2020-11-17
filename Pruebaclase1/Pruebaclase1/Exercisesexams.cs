@@ -34,7 +34,15 @@ namespace Pruebaclase1
             else
                 return a;
         }
+        
         //hacer una funcion que se le pasen tres enteros y que devuelva el mayor de los tres
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <returns></returns>
         public static int IsGreatherthan3(int a, int b, int c)
         {
             if (a > b)
