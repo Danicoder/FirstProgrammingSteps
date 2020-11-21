@@ -57,9 +57,9 @@ namespace Pruebaclase1
                     System.Threading.Thread.Sleep(200);//tiempo que esta quieto y no da ningún resultado
                     System.Console.Clear();//limpiar
                 }
-            }*/
-            Exercisesexams.JapaneseFlag();
-            Exercisesexams.Potencia2(3);
+            }
+            Exercisesexams.JapaneseFlag();*/
+            Exercisesexams.Potencia2(-3);
 
         }
     }
