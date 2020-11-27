@@ -361,32 +361,23 @@ namespace Pruebaclase1
                return result;
         }
         //función que devuelva dos elevado a un nº
-        public static double Potencia2 (int n)
+        public static double Potencia2 (double UserNumber)
         {
-            // podría ser así System.Math.Pow(2, n); con double
-            if(n>=0)
+            
+            if (UserNumber > 0 || UserNumber == 0)
             {
-                double result =1.0;
-                for (int i = 0; i <= n; i++)
-                    result *= 2;
-                return result;
+                double Constant = 1.0;
+                for (int i = 0; i < UserNumber; i++)
+                    Constant *= 2;
+                System.Console.WriteLine("la solución es: " + Constant);
             }
             else
             {
-                /*podría usar un bool invert_value = n<0;
-                 if (invert_value)
-                    n=n-n;
-                for (int i =0; i < n; i++)
-                    result *= 20;
-                if (invert_value)
-                    result = 10/result;
-                    return result;*/
                 double result = 1.0;
-                for (int i = 0; i < -n;i++)
-                    result *= 20;// o divido según necesite (no alcanze a copiar)
-                return result;
+                for (int i = 0; i > UserNumber; i--)
+                    result *= 2;
+                System.Console.WriteLine("la solución es: " + 1 / result);
             }
-            
         }
     }
 }

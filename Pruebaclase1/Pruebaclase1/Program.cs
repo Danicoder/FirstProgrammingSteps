@@ -59,7 +59,7 @@ namespace Pruebaclase1
                 }
             }
             Exercisesexams.JapaneseFlag();*/
-            Exercisesexams.Potencia2(-3);
+            Exercisesexams.Potencia2(3.0);
 
         }
     }
