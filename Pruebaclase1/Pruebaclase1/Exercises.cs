@@ -8,6 +8,7 @@ namespace Pruebaclase1
     {
         // salvo que ponga imprime por pantalla "console.writeline" (es solo para aplicacion de consola o para mensajes de debood)
         // recordar el MVC (en relacion a console.writeline)
+
         //Hacer una función que imprima por pantalla los números del 0 al 100
         public static void Ejercicioserie1()
         {
