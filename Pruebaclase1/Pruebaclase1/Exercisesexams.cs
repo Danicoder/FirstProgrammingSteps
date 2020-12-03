@@ -351,17 +351,17 @@ namespace Pruebaclase1
                 }
             }
         }
-        //hacer uan función que devuelva el sumatorio de un número por ejemplo de 6=1+2+3+4+5+6
+        //hacer uan función que devuelva el sumatorio de un número por ejemplo de 6=1+2+3
         //se cuantas veces voy a repetir la secuencia, por tanto pongo for
         public static int RetournNumber (int n)
         {
-            int result = 0;
+            int result = n;
             for(int i=1;i<=n;i++)
                 result += i;
                return result;
         }
         //función que devuelva dos elevado a un nº
-        public static double Potencia2 (double UserNumber)
+        public static void Potencia2 (double UserNumber)
         {
             
             if (UserNumber > 0 || UserNumber == 0)

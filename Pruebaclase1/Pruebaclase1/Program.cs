@@ -47,7 +47,8 @@ namespace Pruebaclase1
             Exercisesexams.BackStairs(4);
             Exercisesexams.Pyramid(6);
             Exercisesexams.Pyramid2(6);
-            Exercisesexams.PyramidBack(6);
+            Exercisesexams.PyramidBack(6);*/
+            Exercisesexams.RetournNumber(6);
 
             while (true)
             {
@@ -58,7 +59,7 @@ namespace Pruebaclase1
                     System.Console.Clear();//limpiar
                 }
             }
-            Exercisesexams.JapaneseFlag();*/
+            Exercisesexams.JapaneseFlag();
             Exercisesexams.Potencia2(3.0);
 
         }
