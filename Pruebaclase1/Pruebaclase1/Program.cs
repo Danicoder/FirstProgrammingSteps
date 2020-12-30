@@ -21,10 +21,10 @@ namespace Pruebaclase1
 
             Utils.GetMinValue(4,6);
             Utils.GetMixValue(2, 0);
-            Utils.IsEven(10);
+            Utils.IsEven(10);*/
             Utils.Fibonacci();
 
-            SolverEquation.SolverEquation1(6, 5);
+            /*SolverEquation.SolverEquation1(6, 5);
             SolverEquation.SolverEquation2(6, 6, 9);
 
             Exercisesexams.ExercisePlus(1,3);
