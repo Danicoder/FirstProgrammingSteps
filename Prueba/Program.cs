@@ -22,15 +22,27 @@ namespace Prueba
             {
                 Console.WriteLine(intNumbers[i]);
             }
+
+
             for (int i = 0; i < intNumbers.Count - 1; i++)
             {
                 for (int j = i + 1; j < intNumbers.Count; j++)
                 {
                     if (intNumbers[1] > intNumbers[j])
                     {
+                        //for para imprimir, un doble for para ordenar 
                         //intercambiarlo, en tres líneas. intentar intercambiar los valores
+                        int aux = intNumbers[i];
+                        intNumbers[i] = intNumbers[j];
+                        intNumbers[j] = aux;
                     }
                 }
+            }
+
+
+            for (int i = 0; i < intNumbers.Count; i++)
+            {
+                Console.WriteLine(intNumbers[i]);
             }
         }
     }
